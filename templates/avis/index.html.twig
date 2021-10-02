@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+
+
+
+{% block body %}
+<section class="avis">
+{% for avi in avis %}
+    <avis>
+        <h2>{{ avi.titre }}</h2>
+        <div class="metadata">Ecrit le {{ avi.createdAt | date('d/m/y') }} à {{ avi.createdAt | date('H:i') }} par {{ avi.auteur }}</div>
+        <div class="content">
+            {{ avi.content | raw}}
+            <a href="{{ path('avis_show', {'id' : avi.id}) }}" class="btn btn-primary">Lire l'avis</a>
+        </div>
+    </avis>
+  {% endfor %}  
+</section>
+{% endblock %}

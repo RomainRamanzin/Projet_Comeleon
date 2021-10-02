@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+
+
+{% block body %}
+
+    <avis>
+        <h2>{{avi.titre}}</h2>
+        <div class="metadata">Ecrit le {{ avi.createdAt | date('d/m/y') }} à {{ avi.createdAt | date('H:i') }} par {{ avi.auteur }}</div>
+        <div class="content">
+           {{ avi.content | raw}}   
+        </div>
+    </avis>
+{% endblock %}
