@@ -1,57 +1,83 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        
-        <link rel="stylesheet" href="asset/css/bootstrap.min.css"/>
+	<head>
+		<meta charset="UTF-8">
 
-        <header>
-            <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-                <div class="container-fluid">
-                    <a class="navbar-brand" href="/">Notre futur logo</a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                    </button>
-
-                    <div class="collapse navbar-collapse" id="navbarColor01">
-                    <ul class="navbar-nav me-auto">
-                        <li class="nav-item">
-                        <a class="nav-link active" href="/">Acceuil
-                            <span class="visually-hidden">(current)</span>
-                        </a>
-                        </li>
-                        <li class="nav-item">
-                        <a class="nav-link" href="#">Présentation</a>
-                        </li>
-                        <li class="nav-item">
-                        <a class="nav-link" href="#">Nos Services</a>
-                        </li>
-                        <li class="nav-item">
-                        <a class="nav-link" href="#">Les Avis</a>
-                        </li>
-                        <li class="nav-item">
-                        <a class="nav-link" href="#">Nous Contacter</a>
-                        </li>
-                    </ul>
-                    
-                    </div>
-                </div>
-            </nav>
-        <header/>
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
 
 
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        {# Run `composer require symfony/webpack-encore-bundle`
-           and uncomment the following Encore helpers to start using Symfony UX #}
-        {% block stylesheets %}
-            {#{{ encore_entry_link_tags('app') }}#}
-        {% endblock %}
+		<header class="p-3 bg-dark text-white">
+			<div class="container">
+				<div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+					<a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+						<img class="img-fluid img-thumbnail" width="120" src="https://t3.ftcdn.net/jpg/01/37/37/10/240_F_137371088_fgyexgp5eh97Ds4BVgVxZULaFgbLBIjh.jpg">
+					</a>
 
-        {% block javascripts %}
-            {#{{ encore_entry_script_tags('app') }}#}
-        {% endblock %}
-    </head>
-    <body>
-        {% block body %}{% endblock %}
-    </body>
+					<ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+						<li>
+							<a href="#" class="nav-link px-2 text-secondary">Accueil</a>
+						</li>
+						<li>
+							<a href="#" class="nav-link px-2 text-white">Qui Sommes Nous ?</a>
+						</li>
+						<li>
+							<a href="#" class="nav-link px-2 text-white">Nos Prestations</a>
+						</li>
+						<li>
+							<a href="#" class="nav-link px-2 text-white">Avis</a>
+						</li>
+						<li>
+							<a href="#" class="nav-link px-2 text-white">Contact</a>
+						</li>
+					</ul>
+					<div class="text-end">
+						<button type="button" class="btn btn-outline-light me-2">Se Connecter</button>
+						<button type="button" class="btn btn-primary">Créer un Compte</button>
+					</div>
+				</div>
+			</div>
+		</header>
+
+
+		
+		{# Run `composer require symfony/webpack-encore-bundle`
+				           and uncomment the following Encore helpers to start using Symfony UX #}
+		{% block stylesheets %}
+			{#{{ encore_entry_link_tags('app') }}#}
+		{% endblock %}
+
+		{% block javascripts %}
+			{#{{ encore_entry_script_tags('app') }}#}
+		{% endblock %}
+	</head>
+	<body>
+		{% block body %}{% endblock %}
+	</body>
+
+
+	<div class="container">
+		<footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+			<p class="col-md-3 mb-0 text-muted">© 2021 Company, Inc</p>
+
+			<img class="img-fluid img-thumbnail" width="120" src="https://t3.ftcdn.net/jpg/01/37/37/10/240_F_137371088_fgyexgp5eh97Ds4BVgVxZULaFgbLBIjh.jpg">
+
+			<ul class="nav col-md-5 justify-content-end">
+				<li class="nav-item">
+					<a href="#" class="nav-link px-2 text-muted">Accueil</a>
+				</li>
+				<li class="nav-item">
+					<a href="#" class="nav-link px-2 text-muted">Qui Sommes Nous ?</a>
+				</li>
+				<li class="nav-item">
+					<a href="#" class="nav-link px-2 text-muted">Nos Prestations</a>
+				</li>
+				<li class="nav-item">
+					<a href="#" class="nav-link px-2 text-muted">Avis</a>
+				</li>
+				<li class="nav-item">
+					<a href="#" class="nav-link px-2 text-muted">Contact</a>
+				</li>
+			</ul>
+		</footer>
+	</div>
 </html>
