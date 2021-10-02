@@ -1,9 +1,24 @@
 {% extends 'base.html.twig' %}
 
+{% form_theme formAvis 'bootstrap_4_layout.html.twig' %}
+
 {% block body %}
 
     <h1>Création d'un avis !</h1>
 
-    {{ form(formAvis) }}
+    {{ form_start(formAvis)}}
 
+    <div class="form-group">
+        {{ form_row(formAvis.titre, { 'attr' : { placeholder : "Titre de l'avise" }}) }}
+    </div>
+    <div class="form-group">
+        {{ form_row(formAvis.auteur, { 'attr' : { placeholder : "Votre nom" }}) }}
+    </div>
+    <div class="form-group">
+        {{ form_row(formAvis.content, { 'attr' : { placeholder : "Contenu de l'avis" }}) }}
+    </div>
+
+    <button type="submit" class="btn btn-success">Ajouter l'avis</button>
+    
+    {{ form_end(formAvis)}}
 {% endblock %}

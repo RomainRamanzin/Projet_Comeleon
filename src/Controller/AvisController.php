@@ -8,7 +8,9 @@ use Symfony\Component\Routing\Annotation\Route;
 use App\Entity\Avis;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\HttpFoundation\Request;
-
+use Symfony\Component\Form\Extension\Core\Type\TextType;
+use Symfony\Component\Form\Extension\Core\Type\TextareaType;
+use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 
 use App\Repository\AvisRepository;
 
@@ -35,9 +37,20 @@ class AvisController extends AbstractController
 
         $form = $this->createFormBuilder($avis)
                     ->add('titre')
-                    ->add('auteur')
+                    ->add('auteur', Texttype::class)
                     ->add('content')
                     ->getForm();
+
+        $form->handleRequest($request);
+
+        if($form->isSubmitted() && $form->isValid()) {
+            $avis->setCreatedAt(new \DateTime());
+
+           $manager->persist($avis);
+           $manager->flush();
+
+           return $this->redirectToRoute('avis_show', ['id' => $avis->getId()]);
+        }
 
         return $this->render('avis/createAvis.html.twig',[
             'formAvis' => $form->createView()
