@@ -1,0 +1,28 @@
+{% extends 'base.html.twig' %}
+
+
+{% block body %}
+	<style></style>
+
+	<div class="container mt-5">
+		<div class="row">
+			{% for prestation in prestations %}
+				<div class="col-6">
+					<div class="card  text-center mb-4">
+						<div class="iconbox iconbox__style-02 mt-4">
+							<img src="{{ prestation.image }}"class="img-fluid" width="590">
+							<div>
+								<div class="card-body">
+									<h5 class="card-title">{{ prestation.titre }}</h5>
+									<p class="card-text">{{ prestation.description }}</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			{% endfor %}
+		</div>
+	</div>
+
+
+{% endblock %}

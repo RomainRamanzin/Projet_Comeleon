@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+
+	<div class="container mt-4">
+		<h1>Création d'une prestation</h1>
+
+		{{ form_start(formPrestation) }}
+
+		{{ form_row(formPrestation.titre) }}
+		{{ form_row(formPrestation.description) }}
+		{{ form_row(formPrestation.image) }}
+		{{ form_row(formPrestation.prix) }}
+
+		<button type="submit" class="btn btn-primary mt-4">Ajouter la prestation</button>
+		{{ form_end(formPrestation) }}
+	</div>
+
+
+{% endblock %}
