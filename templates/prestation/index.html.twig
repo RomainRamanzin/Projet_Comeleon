@@ -15,6 +15,9 @@
 								<div class="card-body">
 									<h5 class="card-title">{{ prestation.titre }}</h5>
 									<p class="card-text">{{ prestation.description }}</p>
+									<a href="/prestation/{{ prestation.id }}/edit" class="btn btn-outline-primary">Modifier</a>
+									<a href="/prestation/{{ prestation.id }}/edit" class="btn btn-outline-danger">Supprimer</a>
+									<p class="card-text">a partir de {{ prestation.prix }}€</p>
 								</div>
 							</div>
 						</div>

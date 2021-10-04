@@ -83,6 +83,18 @@ class __TwigTemplate_98618dc7410a6fa4383b49d2c78221d033dc6b451fa9a3ae5567b352099
             // line 17
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["prestation"], "description", [], "any", false, false, false, 17), "html", null, true);
             echo "</p>
+\t\t\t\t\t\t\t\t\t<a href=\"/prestation/";
+            // line 18
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["prestation"], "id", [], "any", false, false, false, 18), "html", null, true);
+            echo "/edit\" class=\"btn btn-outline-primary\">Modifier</a>
+\t\t\t\t\t\t\t\t\t<a href=\"/prestation/";
+            // line 19
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["prestation"], "id", [], "any", false, false, false, 19), "html", null, true);
+            echo "/edit\" class=\"btn btn-outline-danger\">Supprimer</a>
+\t\t\t\t\t\t\t\t\t<p class=\"card-text\">a partir de ";
+            // line 20
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["prestation"], "prix", [], "any", false, false, false, 20), "html", null, true);
+            echo "€</p>
 \t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t</div>
@@ -93,7 +105,7 @@ class __TwigTemplate_98618dc7410a6fa4383b49d2c78221d033dc6b451fa9a3ae5567b352099
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['prestation'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 24
+        // line 27
         echo "\t\t</div>
 \t</div>
 
@@ -116,7 +128,7 @@ class __TwigTemplate_98618dc7410a6fa4383b49d2c78221d033dc6b451fa9a3ae5567b352099
 
     public function getDebugInfo()
     {
-        return array (  97 => 24,  84 => 17,  80 => 16,  74 => 13,  69 => 10,  65 => 9,  59 => 5,  52 => 4,  35 => 1,);
+        return array (  109 => 27,  96 => 20,  92 => 19,  88 => 18,  84 => 17,  80 => 16,  74 => 13,  69 => 10,  65 => 9,  59 => 5,  52 => 4,  35 => 1,);
     }
 
     public function getSourceContext()
@@ -138,6 +150,9 @@ class __TwigTemplate_98618dc7410a6fa4383b49d2c78221d033dc6b451fa9a3ae5567b352099
 \t\t\t\t\t\t\t\t<div class=\"card-body\">
 \t\t\t\t\t\t\t\t\t<h5 class=\"card-title\">{{ prestation.titre }}</h5>
 \t\t\t\t\t\t\t\t\t<p class=\"card-text\">{{ prestation.description }}</p>
+\t\t\t\t\t\t\t\t\t<a href=\"/prestation/{{ prestation.id }}/edit\" class=\"btn btn-outline-primary\">Modifier</a>
+\t\t\t\t\t\t\t\t\t<a href=\"/prestation/{{ prestation.id }}/edit\" class=\"btn btn-outline-danger\">Supprimer</a>
+\t\t\t\t\t\t\t\t\t<p class=\"card-text\">a partir de {{ prestation.prix }}€</p>
 \t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t</div>

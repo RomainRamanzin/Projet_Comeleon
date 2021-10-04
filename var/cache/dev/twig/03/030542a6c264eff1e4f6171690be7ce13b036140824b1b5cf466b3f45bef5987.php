@@ -59,34 +59,62 @@ class __TwigTemplate_71467acfa638a46b7d2fa3c62c18414e6547d7d19c166846207923484bf
         echo "
 
 \t<div class=\"container mt-4\">
-\t\t<h1>Création d'une prestation</h1>
 
 \t\t";
-        // line 9
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["formPrestation"]) || array_key_exists("formPrestation", $context) ? $context["formPrestation"] : (function () { throw new RuntimeError('Variable "formPrestation" does not exist.', 9, $this->source); })()), 'form_start');
-        echo "
-
+        // line 8
+        if ((isset($context["editMode"]) || array_key_exists("editMode", $context) ? $context["editMode"] : (function () { throw new RuntimeError('Variable "editMode" does not exist.', 8, $this->source); })())) {
+            // line 9
+            echo "\t\t\t<h1>Modification d'une prestation</h1>
 \t\t";
-        // line 11
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["formPrestation"]) || array_key_exists("formPrestation", $context) ? $context["formPrestation"] : (function () { throw new RuntimeError('Variable "formPrestation" does not exist.', 11, $this->source); })()), "titre", [], "any", false, false, false, 11), 'row');
-        echo "
+        } else {
+            // line 11
+            echo "\t\t\t<h1>Création d'une prestation</h1>
 \t\t";
-        // line 12
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["formPrestation"]) || array_key_exists("formPrestation", $context) ? $context["formPrestation"] : (function () { throw new RuntimeError('Variable "formPrestation" does not exist.', 12, $this->source); })()), "description", [], "any", false, false, false, 12), 'row');
-        echo "
-\t\t";
+        }
         // line 13
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["formPrestation"]) || array_key_exists("formPrestation", $context) ? $context["formPrestation"] : (function () { throw new RuntimeError('Variable "formPrestation" does not exist.', 13, $this->source); })()), "image", [], "any", false, false, false, 13), 'row');
-        echo "
+        echo "\t\t
+
 \t\t";
-        // line 14
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["formPrestation"]) || array_key_exists("formPrestation", $context) ? $context["formPrestation"] : (function () { throw new RuntimeError('Variable "formPrestation" does not exist.', 14, $this->source); })()), "prix", [], "any", false, false, false, 14), 'row');
+        // line 15
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["formPrestation"]) || array_key_exists("formPrestation", $context) ? $context["formPrestation"] : (function () { throw new RuntimeError('Variable "formPrestation" does not exist.', 15, $this->source); })()), 'form_start');
         echo "
 
-\t\t<button type=\"submit\" class=\"btn btn-primary mt-4\">Ajouter la prestation</button>
 \t\t";
         // line 17
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["formPrestation"]) || array_key_exists("formPrestation", $context) ? $context["formPrestation"] : (function () { throw new RuntimeError('Variable "formPrestation" does not exist.', 17, $this->source); })()), 'form_end');
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["formPrestation"]) || array_key_exists("formPrestation", $context) ? $context["formPrestation"] : (function () { throw new RuntimeError('Variable "formPrestation" does not exist.', 17, $this->source); })()), "titre", [], "any", false, false, false, 17), 'row');
+        echo "
+\t\t";
+        // line 18
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["formPrestation"]) || array_key_exists("formPrestation", $context) ? $context["formPrestation"] : (function () { throw new RuntimeError('Variable "formPrestation" does not exist.', 18, $this->source); })()), "description", [], "any", false, false, false, 18), 'row');
+        echo "
+\t\t";
+        // line 19
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["formPrestation"]) || array_key_exists("formPrestation", $context) ? $context["formPrestation"] : (function () { throw new RuntimeError('Variable "formPrestation" does not exist.', 19, $this->source); })()), "image", [], "any", false, false, false, 19), 'row');
+        echo "
+\t\t";
+        // line 20
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["formPrestation"]) || array_key_exists("formPrestation", $context) ? $context["formPrestation"] : (function () { throw new RuntimeError('Variable "formPrestation" does not exist.', 20, $this->source); })()), "prix", [], "any", false, false, false, 20), 'row');
+        echo "
+
+\t\t<button type=\"submit\" class=\"btn btn-primary mt-4\">
+
+\t\t\t";
+        // line 24
+        if ((isset($context["editMode"]) || array_key_exists("editMode", $context) ? $context["editMode"] : (function () { throw new RuntimeError('Variable "editMode" does not exist.', 24, $this->source); })())) {
+            // line 25
+            echo "\t\t\t\tModifier la prestation
+\t\t\t";
+        } else {
+            // line 27
+            echo "\t\t\t\tAjouter la prestation
+\t\t\t";
+        }
+        // line 29
+        echo "
+\t\t</button>
+\t\t";
+        // line 31
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["formPrestation"]) || array_key_exists("formPrestation", $context) ? $context["formPrestation"] : (function () { throw new RuntimeError('Variable "formPrestation" does not exist.', 31, $this->source); })()), 'form_end');
         echo "
 \t</div>
 
@@ -109,7 +137,7 @@ class __TwigTemplate_71467acfa638a46b7d2fa3c62c18414e6547d7d19c166846207923484bf
 
     public function getDebugInfo()
     {
-        return array (  89 => 17,  83 => 14,  79 => 13,  75 => 12,  71 => 11,  66 => 9,  59 => 4,  52 => 3,  35 => 1,);
+        return array (  117 => 31,  113 => 29,  109 => 27,  105 => 25,  103 => 24,  96 => 20,  92 => 19,  88 => 18,  84 => 17,  79 => 15,  75 => 13,  71 => 11,  67 => 9,  65 => 8,  59 => 4,  52 => 3,  35 => 1,);
     }
 
     public function getSourceContext()
@@ -120,7 +148,13 @@ class __TwigTemplate_71467acfa638a46b7d2fa3c62c18414e6547d7d19c166846207923484bf
 
 
 \t<div class=\"container mt-4\">
-\t\t<h1>Création d'une prestation</h1>
+
+\t\t{% if editMode %}
+\t\t\t<h1>Modification d'une prestation</h1>
+\t\t{% else %}
+\t\t\t<h1>Création d'une prestation</h1>
+\t\t{% endif %}
+\t\t
 
 \t\t{{ form_start(formPrestation) }}
 
@@ -129,7 +163,15 @@ class __TwigTemplate_71467acfa638a46b7d2fa3c62c18414e6547d7d19c166846207923484bf
 \t\t{{ form_row(formPrestation.image) }}
 \t\t{{ form_row(formPrestation.prix) }}
 
-\t\t<button type=\"submit\" class=\"btn btn-primary mt-4\">Ajouter la prestation</button>
+\t\t<button type=\"submit\" class=\"btn btn-primary mt-4\">
+
+\t\t\t{% if editMode %}
+\t\t\t\tModifier la prestation
+\t\t\t{% else %}
+\t\t\t\tAjouter la prestation
+\t\t\t{% endif %}
+
+\t\t</button>
 \t\t{{ form_end(formPrestation) }}
 \t</div>
 

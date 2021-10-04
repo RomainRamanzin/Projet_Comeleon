@@ -7,6 +7,7 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
+use Doctrine\ORM\EntityManagerInterface;
 
 use App\Entity\Prestation;
 
@@ -30,9 +31,13 @@ class PrestationController extends AbstractController
 
     /**
      * @Route("/prestation/new", name="prestation_create")
+     * @Route("/prestation/{id}/edit", name="prestation_edit")
      */
-    public function create(Request $request, ObjectManager $manager){
-        $prestation = new Prestation();
+    public function form(Prestation $prestation = null,Request $request, EntityManagerInterface $manager){
+        
+        if(!$prestation){
+            $prestation = new Prestation();
+        }
 
         $form = $this->createFormBuilder($prestation)
                      ->add('titre')
@@ -51,7 +56,8 @@ class PrestationController extends AbstractController
         }
 
         return $this->render('prestation/create.html.twig',[
-            'formPrestation' => $form->createView()
+            'formPrestation' => $form->createView(),
+            'editMode' =>$prestation->getId() !== null
         ]);
     }
 }
