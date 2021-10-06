@@ -15,7 +15,7 @@ use Symfony\Component\Security\Core\User\UserInterface;
 class SecurityController extends AbstractController
 {
     /**
-     * @Route("/inscription", name="security")
+     * @Route("/inscription", name="registration")
      */
     public function registration(Request $request, EntityManagerInterface $manager,
     UserPasswordEncoderInterface $encoder)
@@ -34,16 +34,23 @@ class SecurityController extends AbstractController
             $manager->persist($user);//persister dans la base 
             $manager->flush();//le sauvegarder 
 
-            return $this->redirectToRoute('security/connexion.html.twig');
+            return $this->redirectToRoute('login');
         }
         return $this->render('security/registration.html.twig', 
         [ 'form' => $form->createView()]);
     }
     /**
-     * @Route("/connexion", name="security_login")
+     * @Route("/login", name="login")
      */
-    public function login()//fonctionne pas
+    public function login()
     {
-        return $this->render('security/login.html.twig');
+        return $this->render('presentation/login.html.twig');
+    }
+    /**
+     * @Route("/logout", name="logout")
+     */
+    public function logout()
+    {
+        
     }
 }

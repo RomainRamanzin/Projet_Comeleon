@@ -6,9 +6,8 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
-
+use App\Entity\User;
 use App\Entity\Present;
-use App\Entity\Login;
 
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
@@ -75,4 +74,11 @@ class PresentationController extends AbstractController
         return $this->render('presentation/page.html.twig' , 
         ['form' => $form->createView()]);
     } 
+    /**
+     * @Route("/logout", name="logout")
+     */
+    public function logout()
+    {
+        
+    }
 }
