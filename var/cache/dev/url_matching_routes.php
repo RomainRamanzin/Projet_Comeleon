@@ -8,19 +8,23 @@
 return [
     false, // $matchHost
     [ // $staticRoutes
-        '/' => [[['_route' => 'acceuil', '_controller' => 'App\\Controller\\AcceuilController::index'], null, null, null, false, false, null]],
-        '/prestation' => [[['_route' => 'prestation', '_controller' => 'App\\Controller\\PrestationController::index'], null, null, null, false, false, null]],
-        '/prestation/new' => [[['_route' => 'prestation_create', '_controller' => 'App\\Controller\\PrestationController::form'], null, null, null, false, false, null]],
+        '/' => [[['_route' => 'home', '_controller' => 'App\\Controller\\PresentationController::home'], null, null, null, false, false, null]],
+        '/login' => [[['_route' => 'login', '_controller' => 'App\\Controller\\PresentationController::login'], null, null, null, false, false, null]],
+        '/inscription' => [[['_route' => 'security', '_controller' => 'App\\Controller\\SecurityController::registration'], null, null, null, false, false, null]],
     ],
     [ // $regexpList
         0 => '{^(?'
-                .'|/prestation/([^/]++)/edit(*:32)'
-                .'|/_error/(\\d+)(?:\\.([^/]++))?(*:67)'
+                .'|/p(?'
+                    .'|resentation/([^/]++)(*:32)'
+                    .'|age/([^/]++)(*:51)'
+                .')'
+                .'|/_error/(\\d+)(?:\\.([^/]++))?(*:87)'
             .')/?$}sDu',
     ],
     [ // $dynamicRoutes
-        32 => [[['_route' => 'prestation_edit', '_controller' => 'App\\Controller\\PrestationController::form'], ['id'], null, null, false, false, null]],
-        67 => [
+        32 => [[['_route' => 'presentation', '_controller' => 'App\\Controller\\PresentationController::presentation'], ['id'], null, null, false, true, null]],
+        51 => [[['_route' => 'page_edit', '_controller' => 'App\\Controller\\PresentationController::form'], ['id'], null, null, false, true, null]],
+        87 => [
             [['_route' => '_preview_error', '_controller' => 'error_controller::preview', '_format' => 'html'], ['code', '_format'], null, null, false, true, null],
             [null, null, null, null, false, false, 0],
         ],

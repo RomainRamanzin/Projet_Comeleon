@@ -49,22 +49,55 @@ class __TwigTemplate_3e3b42f31cdc9896733944675ade14782c56509979c2ce653b1d7f7c858
         // line 5
         $this->displayBlock('title', $context, $blocks);
         echo "</title>
+        <link rel=\"stylesheet\" href=\"asset/css/bootstrap.min.css\"/>
+        <link rel=\"stylesheet\" href=\"asset/css/style.css\"/>
+
         ";
-        // line 8
+        // line 11
         echo "        ";
         $this->displayBlock('stylesheets', $context, $blocks);
-        // line 11
+        // line 14
         echo "
         ";
-        // line 12
-        $this->displayBlock('javascripts', $context, $blocks);
         // line 15
+        $this->displayBlock('javascripts', $context, $blocks);
+        // line 18
         echo "    </head>
     <body>
+        <nav class=\"navbar navbar-expand-lg navbar-dark bg-dark\">
+            <div class=\"container-fluid\">
+                <a class=\"navbar-brand\" href=\"/\">Allo Plombier</a>
+                <button class=\"navbar-toggler\" type=\"button\" data-bs-toggle=\"collapse\" data-bs-target=\"#navbarColor02\" aria-controls=\"navbarColor02\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">
+                <span class=\"navbar-toggler-icon\"></span>
+                </button>
+
+                <div class=\"collapse navbar-collapse\" id=\"navbarColor02\">
+                <ul class=\"navbar-nav me-auto\">
+                    <li class=\"nav-item\">
+                    <a class=\"nav-link active\" href=\"/\">Home
+                        <span class=\"visually-hidden\">(current)</span>
+                    </a>
+                    </li>
+                    <li class=\"nav-item\">
+                    <a class=\"nav-link\" href=\"/presentation\">Présentation</a>
+                    </li>
+                    <li class=\"nav-item\">
+                    <a class=\"nav-link\" href=\"/page\">page</a>
+                    </li>
+                    <li class=\"nav-item\">
+                    <a class=\"nav-link\" href=\"#\">About</a>
+                    </li>
+                </ul>
+                <form class=\"d-flex\">
+                    <button class=\"btn btn-secondary my-2 my-sm-0\" type=\"submit\" >Connexion</button>
+                </form>
+                </div>
+            </div>
+            </nav>
         ";
-        // line 17
+        // line 50
         $this->displayBlock('body', $context, $blocks);
-        // line 18
+        // line 51
         echo "    </body>
 </html>
 ";
@@ -86,39 +119,39 @@ class __TwigTemplate_3e3b42f31cdc9896733944675ade14782c56509979c2ce653b1d7f7c858
 
     }
 
-    // line 8
+    // line 11
     public function block_stylesheets($context, array $blocks = [])
     {
         $macros = $this->macros;
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "stylesheets"));
 
-        // line 9
+        // line 12
         echo "            ";
-        // line 10
+        // line 13
         echo "        ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
 
     }
 
-    // line 12
+    // line 15
     public function block_javascripts($context, array $blocks = [])
     {
         $macros = $this->macros;
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 13
+        // line 16
         echo "            ";
-        // line 14
+        // line 17
         echo "        ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
 
     }
 
-    // line 17
+    // line 50
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -137,7 +170,7 @@ class __TwigTemplate_3e3b42f31cdc9896733944675ade14782c56509979c2ce653b1d7f7c858
 
     public function getDebugInfo()
     {
-        return array (  122 => 17,  115 => 14,  113 => 13,  106 => 12,  99 => 10,  97 => 9,  90 => 8,  77 => 5,  68 => 18,  66 => 17,  62 => 15,  60 => 12,  57 => 11,  54 => 8,  50 => 5,  44 => 1,);
+        return array (  155 => 50,  148 => 17,  146 => 16,  139 => 15,  132 => 13,  130 => 12,  123 => 11,  110 => 5,  101 => 51,  99 => 50,  65 => 18,  63 => 15,  60 => 14,  57 => 11,  50 => 5,  44 => 1,);
     }
 
     public function getSourceContext()
@@ -147,6 +180,9 @@ class __TwigTemplate_3e3b42f31cdc9896733944675ade14782c56509979c2ce653b1d7f7c858
     <head>
         <meta charset=\"UTF-8\">
         <title>{% block title %}Welcome!{% endblock %}</title>
+        <link rel=\"stylesheet\" href=\"asset/css/bootstrap.min.css\"/>
+        <link rel=\"stylesheet\" href=\"asset/css/style.css\"/>
+
         {# Run `composer require symfony/webpack-encore-bundle`
            and uncomment the following Encore helpers to start using Symfony UX #}
         {% block stylesheets %}
@@ -158,9 +194,39 @@ class __TwigTemplate_3e3b42f31cdc9896733944675ade14782c56509979c2ce653b1d7f7c858
         {% endblock %}
     </head>
     <body>
+        <nav class=\"navbar navbar-expand-lg navbar-dark bg-dark\">
+            <div class=\"container-fluid\">
+                <a class=\"navbar-brand\" href=\"/\">Allo Plombier</a>
+                <button class=\"navbar-toggler\" type=\"button\" data-bs-toggle=\"collapse\" data-bs-target=\"#navbarColor02\" aria-controls=\"navbarColor02\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">
+                <span class=\"navbar-toggler-icon\"></span>
+                </button>
+
+                <div class=\"collapse navbar-collapse\" id=\"navbarColor02\">
+                <ul class=\"navbar-nav me-auto\">
+                    <li class=\"nav-item\">
+                    <a class=\"nav-link active\" href=\"/\">Home
+                        <span class=\"visually-hidden\">(current)</span>
+                    </a>
+                    </li>
+                    <li class=\"nav-item\">
+                    <a class=\"nav-link\" href=\"/presentation\">Présentation</a>
+                    </li>
+                    <li class=\"nav-item\">
+                    <a class=\"nav-link\" href=\"/page\">page</a>
+                    </li>
+                    <li class=\"nav-item\">
+                    <a class=\"nav-link\" href=\"#\">About</a>
+                    </li>
+                </ul>
+                <form class=\"d-flex\">
+                    <button class=\"btn btn-secondary my-2 my-sm-0\" type=\"submit\" >Connexion</button>
+                </form>
+                </div>
+            </div>
+            </nav>
         {% block body %}{% endblock %}
     </body>
 </html>
-", "base.html.twig", "C:\\Workspace\\Comeleon\\templates\\base.html.twig");
+", "base.html.twig", "C:\\Users\\sinan\\Documents\\workspace\\Ap-cemoleon\\templates\\base.html.twig");
     }
 }

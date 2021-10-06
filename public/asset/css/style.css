@@ -1,0 +1,39 @@
+.globale{
+    display: flex;
+    width: 1000px;
+    text-align: center;
+    margin-top: 50px;
+}
+.picture{
+    display: flex;
+    justify-content: right;
+    width: 250px;
+    height: 250px;
+    margin-right: 50px;
+}
+.forme{
+    margin-top: 100px;
+    width: 500px;
+    height: 300px;
+    margin-bottom: 50px;
+}
+.btn{
+    display: flex;
+    justify-content: center;
+    width: 500px;
+}
+.connexion{
+    text-align: center;
+    color: white;
+    margin-top: 50px;
+}
+.example-wrapper{
+    max-width: 1000px;
+    text-align: center;
+    margin-top: 50px;
+}
+.btn-log{
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
