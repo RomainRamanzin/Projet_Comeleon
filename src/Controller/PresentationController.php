@@ -48,20 +48,6 @@ class PresentationController extends AbstractController
         ]);
     }
     /**
-     * @Route("/login", name="login")
-     */
-    public function login(Request $request)
-    {
-        $con = new Login();
-
-        $form = $this->createFormBuilder($con)
-                    ->add('Identifiant')
-                    ->add('Password')
-                    ->getForm();
-        return $this->render('presentation/login.html.twig', ['form' => $form->createView()
-        ]);
-    }
-    /**
      * @Route("/page/{id}", name="page_edit")
      */
     public function form(Present $presentations,Request $request,
