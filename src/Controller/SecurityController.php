@@ -2,55 +2,69 @@
 
 namespace App\Controller;
 
-use App\Entity\User;
-use App\Form\RegistrationType;
+use App\Entity\Present;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
-use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
-use Symfony\Component\Security\Core\User\UserInterface;
+use Symfony\Component\Security\Http\Authentication\AuthenticationUtils;
 
 class SecurityController extends AbstractController
 {
     /**
-     * @Route("/inscription", name="registration")
+     * @Route("/page/{id}", name="edit")
      */
-    public function registration(Request $request, EntityManagerInterface $manager,
-    UserPasswordEncoderInterface $encoder)
+    public function form(Present $presentations,Request $request,
+     EntityManagerInterface $manager)
     {
-        $user = new User();
-        $form = $this->createForm(RegistrationType::class, $user);//création de la form inscrire
+        $form = $this->createFormBuilder($presentations)
+                    ->add('title')
+                    ->add('content')
+                    ->add('imageLien')
+                    ->getForm();
 
-        $form->handleRequest($request);//Analyse de la request
+        $form->handleRequest($request);
 
-        if($form->isSubmitted() && $form->isValid()) //si le formulaire est soumis et champs valide
+        if($form->isSubmitted() && $form->isValid())
         {
-            $hash = $encoder->encodePassword($user, $user->getPassword());//pour encoder le mot de passe 2
+            $presentations->setCreateAt(new \DateTime());
 
-            $user->setPassword($hash);//remplacer le mot de passe par celui crypté
+            $manager->persist($presentations);
 
-            $manager->persist($user);//persister dans la base 
-            $manager->flush();//le sauvegarder 
+            $manager->flush();
 
-            return $this->redirectToRoute('login');
+            return $this->redirectToRoute('presentation' , 
+            ['id' => $presentations->getId()]);
         }
-        return $this->render('security/registration.html.twig', 
-        [ 'form' => $form->createView()]);
-    }
+        return $this->render('presentation/page.html.twig' , 
+        ['form' => $form->createView()]);
+    } 
     /**
-     * @Route("/login", name="login")
+     * @Route("/login", name="app_login")
      */
-    public function login()
+    public function login(AuthenticationUtils $authenticationUtils, 
+    Present $present = null): Response
     {
-        return $this->render('presentation/login.html.twig');
+        $present = new Present();
+
+        if ($this->getUser()) {
+            return $this->redirectToRoute('edit', ['id'=>$present->getId()]);
+        }
+
+        // get the login error if there is one
+        $error = $authenticationUtils->getLastAuthenticationError();
+        // last username entered by the user
+        $lastUsername = $authenticationUtils->getLastUsername();
+
+        return $this->render('security/login.html.twig', ['last_username' => $lastUsername, 'error' => $error]);
     }
+
     /**
-     * @Route("/logout", name="logout")
+     * @Route("/logout", name="app_logout")
      */
     public function logout()
     {
-        
+        throw new \LogicException('This method can be blank - it will be intercepted by the logout key on your firewall.');
     }
 }

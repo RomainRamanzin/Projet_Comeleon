@@ -8,13 +8,19 @@
     .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
 </style>
 
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
-
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href="{{ 'C:/Users/sinan/Documents/workspace/Ap-cemoleon/src/Controller/PresentationController.php'|file_link(0) }}">src/Controller/PresentationController.php</a></code></li>
-        <li>Your template at <code><a href="{{ 'C:/Users/sinan/Documents/workspace/Ap-cemoleon/templates/presentation/index.html.twig'|file_link(0) }}">templates/presentation/index.html.twig</a></code></li>
-    </ul>
-</div>
+<section class="presentations">
+    {% for presentation in presentations %}
+    <div class="example-wrapper">
+        <h1> {{ presentation.title }} </h1>
+        <br>
+        <div class="globale">
+            <img class="picture" src="{{ presentation.imageLien }}">
+            <div class="para">
+                <p>{{ presentation.content | raw }}</p>
+                <div class="date">Ecrit le {{ presentation.createAt | date('d/m/Y') }} à {{ presentation.createAt | date('H:i') }}</div> 
+            </div>
+        </div>
+    </div>
+</section>
+{% endfor %}
 {% endblock %}

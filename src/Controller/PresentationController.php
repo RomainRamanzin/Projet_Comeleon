@@ -2,26 +2,28 @@
 
 namespace App\Controller;
 
-use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use App\Entity\User;
+
+use App\Entity\Present;
+use App\Repository\PresentRepository;
+use Doctrine\ORM\EntityManagerInterface;
+use Symfony\Component\HttpFoundation\Request;
 
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
-use App\Entity\User;
-use App\Entity\Present;
-
-use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
-use Doctrine\ORM\EntityManagerInterface;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 class PresentationController extends AbstractController
 {
     /**
      * @Route("/presentation", name="presentation")
      */
-    public function index(): Response
+    public function index(PresentRepository $repo): Response
     {
         return $this->render('presentation/index.html.twig', [
             'controller_name' => 'PresentationController',
+            'presentations'=>$repo->findAll()
         ]);
     }
     /**
@@ -32,53 +34,5 @@ class PresentationController extends AbstractController
         return $this->render('presentation/home.html.twig', [
             'controller_name' => 'PresentationController',
         ]);
-    }
-    /**
-     * @Route("/presentation/{id}", name="presentation")
-     */
-    public function presentation(): Response
-    {
-        $repo = $this->getDoctrine()->getRepository(Present::class);
-        $presentations = $repo->findAll();
-
-        return $this->render('presentation/presentation.html.twig', [
-            'controller_name' => 'PresentationController',
-            'presentations' => $presentations
-        ]);
-    }
-    /**
-     * @Route("/page/{id}", name="page_edit")
-     */
-    public function form(Present $presentations,Request $request,
-     EntityManagerInterface $manager)
-    {
-        $form = $this->createFormBuilder($presentations)
-                    ->add('title')
-                    ->add('content')
-                    ->add('imageLien')
-                    ->getForm();
-
-        $form->handleRequest($request);
-
-        if($form->isSubmitted() && $form->isValid())
-        {
-            $presentations->setCreateAt(new \DateTime());
-
-            $manager->persist($presentations);
-
-            $manager->flush();
-
-            return $this->redirectToRoute('presentation' , 
-            ['id' => $presentations->getId()]);
-        }
-        return $this->render('presentation/page.html.twig' , 
-        ['form' => $form->createView()]);
-    } 
-    /**
-     * @Route("/logout", name="logout")
-     */
-    public function logout()
-    {
-        
     }
 }

@@ -32,20 +32,14 @@
                     </a>
                     </li>
                     <li class="nav-item">
-                    <a class="nav-link" href="/presentation/{id}">Présentation</a>
+                    <a class="nav-link" href="/presentation">Présentation</a>
                     </li>
                     <li class="nav-item">
                     <a class="nav-link" href="/page/15">page</a>
                     </li>
-                    {% if not app.user %}
-                        <li class="nav-item">
-                            <a href="{{ path('login') }}" class="nav-link">Connexion</a>
-                        </li>
-                    {% else %}
-                        <li class="nav-item">
-                            <a href="{{ path('logout') }}" class="nav-link"> Déconnexion</a>
-                        </li>
-                    {% endif %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="/login"> Connexion </a>
+                    </li>
                 </ul>
                 </div>
             </div>
