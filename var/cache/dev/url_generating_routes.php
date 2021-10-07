@@ -7,5 +7,6 @@ return [
     'prestation' => [[], ['_controller' => 'App\\Controller\\PrestationController::index'], [], [['text', '/prestation']], [], []],
     'prestation_create' => [[], ['_controller' => 'App\\Controller\\PrestationController::form'], [], [['text', '/prestation/new']], [], []],
     'prestation_edit' => [['id'], ['_controller' => 'App\\Controller\\PrestationController::form'], [], [['text', '/edit'], ['variable', '/', '[^/]++', 'id', true], ['text', '/prestation']], [], []],
+    'app_register' => [[], ['_controller' => 'App\\Controller\\RegistrationController::register'], [], [['text', '/register']], [], []],
     '_preview_error' => [['code', '_format'], ['_controller' => 'error_controller::preview', '_format' => 'html'], ['code' => '\\d+'], [['variable', '.', '[^/]++', '_format', true], ['variable', '/', '\\d+', 'code', true], ['text', '/_error']], [], []],
 ];
