@@ -49,7 +49,7 @@ class AvisController extends AbstractController
            $manager->persist($avis);
            $manager->flush();
 
-           return $this->render('avis_show', ['id' => $avis->getId()]);
+           return $this->redirectToRoute("avis");
         }
 
         return $this->render('avis/createAvis.html.twig',[
