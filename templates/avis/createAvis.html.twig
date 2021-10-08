@@ -4,10 +4,10 @@
 
 {% block body %}
 
-    <h1>Création d'un avis !</h1>
+    <center><h1>Création d'un avis !</h1></center>
 
     {{ form_start(formAvis)}}
-
+<div class="container">
     <div class="form-group">
         {{ form_row(formAvis.titre, { 'attr' : { placeholder : "Titre de l'avis" }}) }}
     </div>
@@ -19,6 +19,6 @@
     </div>
 
     <button type="submit" class="btn btn-success">Ajouter l'avis</button>
-    
+    </div>
     {{ form_end(formAvis)}}
 {% endblock %}
