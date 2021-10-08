@@ -31,8 +31,12 @@
 						</li>
 					</ul>
 					<div class="text-end">
+					{% if is_granted('IS_AUTHENTICATED_FULLY') %}
+    					<a href="/logout" type="button" class="btn btn-outline-danger">Se déconnecter</a>
+					{% else %}
 						<a href="/login" type="button" class="btn btn-outline-light me-2">Se Connecter</a>
 						<a href="/register" type="button" class="btn btn-outline-warning">Créer un compte</a>
+					{% endif %}
 					</div>
 				</div>
 			</div>

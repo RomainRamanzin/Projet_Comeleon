@@ -60,4 +60,16 @@ class PrestationController extends AbstractController
             'editMode' =>$prestation->getId() !== null
         ]);
     }
+
+    /**
+     * @Route("/prestation/{id}/delete", name="prestation_delete")
+     */
+    public function delete(Prestation $prestation)
+    {
+        $manager = $this->getDoctrine()->getManager();
+        $manager->remove($prestation);
+        $manager->flush();
+
+        return $this->redirectToRoute("prestation");
+    }
 }

@@ -17,13 +17,17 @@ return [
     ],
     [ // $regexpList
         0 => '{^(?'
-                .'|/prestation/([^/]++)/edit(*:32)'
-                .'|/_error/(\\d+)(?:\\.([^/]++))?(*:67)'
+                .'|/prestation/([^/]++)/(?'
+                    .'|edit(*:35)'
+                    .'|delete(*:48)'
+                .')'
+                .'|/_error/(\\d+)(?:\\.([^/]++))?(*:84)'
             .')/?$}sDu',
     ],
     [ // $dynamicRoutes
-        32 => [[['_route' => 'prestation_edit', '_controller' => 'App\\Controller\\PrestationController::form'], ['id'], null, null, false, false, null]],
-        67 => [
+        35 => [[['_route' => 'prestation_edit', '_controller' => 'App\\Controller\\PrestationController::form'], ['id'], null, null, false, false, null]],
+        48 => [[['_route' => 'prestation_delete', '_controller' => 'App\\Controller\\PrestationController::delete'], ['id'], null, null, false, false, null]],
+        84 => [
             [['_route' => '_preview_error', '_controller' => 'error_controller::preview', '_format' => 'html'], ['code', '_format'], null, null, false, true, null],
             [null, null, null, null, false, false, 0],
         ],

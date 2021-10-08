@@ -7,6 +7,7 @@ return [
     'prestation' => [[], ['_controller' => 'App\\Controller\\PrestationController::index'], [], [['text', '/prestation']], [], []],
     'prestation_create' => [[], ['_controller' => 'App\\Controller\\PrestationController::form'], [], [['text', '/prestation/new']], [], []],
     'prestation_edit' => [['id'], ['_controller' => 'App\\Controller\\PrestationController::form'], [], [['text', '/edit'], ['variable', '/', '[^/]++', 'id', true], ['text', '/prestation']], [], []],
+    'prestation_delete' => [['id'], ['_controller' => 'App\\Controller\\PrestationController::delete'], [], [['text', '/delete'], ['variable', '/', '[^/]++', 'id', true], ['text', '/prestation']], [], []],
     'app_register' => [[], ['_controller' => 'App\\Controller\\RegistrationController::register'], [], [['text', '/register']], [], []],
     'app_login' => [[], ['_controller' => 'App\\Controller\\SecurityController::login'], [], [['text', '/login']], [], []],
     'app_logout' => [[], ['_controller' => 'App\\Controller\\SecurityController::logout'], [], [['text', '/logout']], [], []],
