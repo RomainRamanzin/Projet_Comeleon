@@ -27,19 +27,20 @@
                 <div class="collapse navbar-collapse" id="navbarColor02">
                 <ul class="navbar-nav me-auto">
                     <li class="nav-item">
-                    <a class="nav-link active" href="/">Home
-                        <span class="visually-hidden">(current)</span>
-                    </a>
+                        <a class="nav-link" href="/presentation">Présentation</a>
                     </li>
-                    <li class="nav-item">
-                    <a class="nav-link" href="/presentation">Présentation</a>
-                    </li>
-                    <li class="nav-item">
-                    <a class="nav-link" href="/page/15">page</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/login"> Connexion </a>
-                    </li>
+                    {% if not app.user %}
+                        <li class="nav-item">
+                            <a class="nav-link" href="/login"> Connexion </a>
+                        </li>
+                    {% else %}
+                        <li class="nav-item">
+                                <a class="nav-link" href="/page"> Modification de page </a>
+                        </li>
+                        <li class="nav-item">
+                                <a class="nav-link" href="/logout"> Deconnexion </a>
+                        </li>
+                    {% endif %}
                 </ul>
                 </div>
             </div>

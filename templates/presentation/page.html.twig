@@ -10,13 +10,16 @@
 
 <div class="example-wrapper">
     <h1> Changement du texte </h1>
+
         {{ form_start(form) }}
         
-        {{ form_widget(form) }}
-
-        <button type="submit" class="btn btn-primary"> Enregistrer </button>
-
+        {{ form_row(form.title) }}
+        {{ form_row(form.content) }}
+        {{ form_row(form.imageLien) }}
+        
         {{ form_end(form) }}
+        </br>
+        <center><button type="submit" class="btn btn-primary"> Enregistrer </button></center>
 </div>
     
 {% endblock %}

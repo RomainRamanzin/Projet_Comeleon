@@ -6,7 +6,7 @@ return [
     'presentation' => [[], ['_controller' => 'App\\Controller\\PresentationController::index'], [], [['text', '/presentation']], [], []],
     'home' => [[], ['_controller' => 'App\\Controller\\PresentationController::home'], [], [['text', '/']], [], []],
     'app_register' => [[], ['_controller' => 'App\\Controller\\RegistrationController::register'], [], [['text', '/register']], [], []],
-    'edit' => [['id'], ['_controller' => 'App\\Controller\\SecurityController::form'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/page']], [], []],
+    'edit' => [[], ['_controller' => 'App\\Controller\\SecurityController::form'], [], [['text', '/page']], [], []],
     'app_login' => [[], ['_controller' => 'App\\Controller\\SecurityController::login'], [], [['text', '/login']], [], []],
     'app_logout' => [[], ['_controller' => 'App\\Controller\\SecurityController::logout'], [], [['text', '/logout']], [], []],
     '_preview_error' => [['code', '_format'], ['_controller' => 'error_controller::preview', '_format' => 'html'], ['code' => '\\d+'], [['variable', '.', '[^/]++', '_format', true], ['variable', '/', '\\d+', 'code', true], ['text', '/_error']], [], []],

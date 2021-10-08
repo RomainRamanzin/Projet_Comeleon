@@ -19,11 +19,14 @@ class PresentationController extends AbstractController
     /**
      * @Route("/presentation", name="presentation")
      */
-    public function index(PresentRepository $repo): Response
+    public function index(): Response
     {
+        $prest = $this->getDoctrine()->getRepository(Present::class)->findAll();
+
+
         return $this->render('presentation/index.html.twig', [
             'controller_name' => 'PresentationController',
-            'presentations'=>$repo->findAll()
+            'presentations'=> $prest
         ]);
     }
     /**
