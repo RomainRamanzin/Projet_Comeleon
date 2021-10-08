@@ -8,10 +8,12 @@ $baseDir = dirname($vendorDir);
 return array(
     'App\\Controller\\AcceuilController' => $baseDir . '/src/Controller/AcceuilController.php',
     'App\\Controller\\PrestationController' => $baseDir . '/src/Controller/PrestationController.php',
+    'App\\Controller\\RegistrationController' => $baseDir . '/src/Controller/RegistrationController.php',
     'App\\DataFixtures\\AppFixtures' => $baseDir . '/src/DataFixtures/AppFixtures.php',
     'App\\DataFixtures\\PrestationFixtures' => $baseDir . '/src/DataFixtures/PrestationFixtures.php',
     'App\\Entity\\Prestation' => $baseDir . '/src/Entity/Prestation.php',
     'App\\Entity\\User' => $baseDir . '/src/Entity/User.php',
+    'App\\Form\\RegistrationFormType' => $baseDir . '/src/Form/RegistrationFormType.php',
     'App\\Kernel' => $baseDir . '/src/Kernel.php',
     'App\\Repository\\PrestationRepository' => $baseDir . '/src/Repository/PrestationRepository.php',
     'App\\Repository\\UserRepository' => $baseDir . '/src/Repository/UserRepository.php',

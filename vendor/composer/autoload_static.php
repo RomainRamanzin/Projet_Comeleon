@@ -454,10 +454,12 @@ class ComposerStaticInitf51bd138eade2eaa1e8d8fb721054605
     public static $classMap = array (
         'App\\Controller\\AcceuilController' => __DIR__ . '/../..' . '/src/Controller/AcceuilController.php',
         'App\\Controller\\PrestationController' => __DIR__ . '/../..' . '/src/Controller/PrestationController.php',
+        'App\\Controller\\RegistrationController' => __DIR__ . '/../..' . '/src/Controller/RegistrationController.php',
         'App\\DataFixtures\\AppFixtures' => __DIR__ . '/../..' . '/src/DataFixtures/AppFixtures.php',
         'App\\DataFixtures\\PrestationFixtures' => __DIR__ . '/../..' . '/src/DataFixtures/PrestationFixtures.php',
         'App\\Entity\\Prestation' => __DIR__ . '/../..' . '/src/Entity/Prestation.php',
         'App\\Entity\\User' => __DIR__ . '/../..' . '/src/Entity/User.php',
+        'App\\Form\\RegistrationFormType' => __DIR__ . '/../..' . '/src/Form/RegistrationFormType.php',
         'App\\Kernel' => __DIR__ . '/../..' . '/src/Kernel.php',
         'App\\Repository\\PrestationRepository' => __DIR__ . '/../..' . '/src/Repository/PrestationRepository.php',
         'App\\Repository\\UserRepository' => __DIR__ . '/../..' . '/src/Repository/UserRepository.php',
