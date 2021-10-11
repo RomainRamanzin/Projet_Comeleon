@@ -1,31 +1,44 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
 
-<section class="presentations">
-{% if is_granted('IS_AUTHENTICATED_FULLY') %}
-	<a href="/presentation/new" class="btn mb-4 px-4 btn-outline-primary">Ajouter une Presentation</a>
-{% endif %}
-    {% for presentation in presentations %}
-    <div class="example-wrapper">
-        <h1> {{ presentation.title }} </h1>
-        <br>
-        <div class="globale">
-            <img class="picture" src="{{ presentation.imageLien }}">
-            <div class="para">
-                <p>{{ presentation.content | raw }}</p>
-                <div class="date">Ecrit le {{ presentation.createAt | date('d/m/Y') }} à {{ presentation.createAt | date('H:i') }}</div> 
-            </div>
-            {% if is_granted('IS_AUTHENTICATED_FULLY') %}
-			    <a href="/presentation/{{ presentation.id }}/edit" class="btn btn-outline-primary">Modifier</a>
-				<a href="/presentation/{{ presentation.id }}/delete" onclick="return confirm('Voulez vous vraiment supprimer la prestation ?')" class="btn btn-outline-danger">Supprimer</a>
-			{% endif %}
-        </div>
+	<div class="container p-xl">
+		{% if is_granted('IS_AUTHENTICATED_FULLY') %}
+			<a href="/presentation/new" class="btn mt-4 px-4 btn-outline-primary">Ajouter une Presentation</a>
+		{% endif %}
+        {% set nb = 1 %}
+		{% for presentation in presentations %}
+            {% if nb % 2 == 0 %}
+
+
+			<h1 class="card-title my-4 text-center">{{ presentation.title }}</h1>
+			<div class="card mb-3 border-light">
+				<div class="row g-0">
+					<div class="col-md-6">
+						<img src="{{ presentation.imageLien }}" class="img-fluid rounded-start" alt="...">
+					</div>
+					<div class="col-md-6">
+						<div class="card-body">
+							<p class="card-text lead">{{ presentation.content | raw }}</p>
+							<div class="text-center">
+								<div class="date">Ecrit le
+									{{ presentation.createAt | date('d/m/Y') }}
+									à
+									{{ presentation.createAt | date('H:i') }}</div>
+								{% if is_granted('IS_AUTHENTICATED_FULLY') %}
+								</br>
+								<a href="/presentation/{{ presentation.id }}/edit" class="btn btn-outline-primary">Modifier</a>
+								<a href="/presentation/{{ presentation.id }}/delete" onclick="return confirm('Voulez vous vraiment supprimer la presentation ?')" class="btn btn-outline-danger">Supprimer</a>
+							{% endif %}
+						</div>
+					</div>
+				</div>
+			</div>
+            {% else %}
+           //Mette la page en inversée
+            {% endif %}
+            {% set nb = nb + 1 %}
+	    {% endfor %}
     </div>
-</section>
-{% endfor %}
+
 {% endblock %}
