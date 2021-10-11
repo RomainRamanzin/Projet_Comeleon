@@ -1,19 +1,86 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        {# Run `composer require symfony/webpack-encore-bundle`
-           and uncomment the following Encore helpers to start using Symfony UX #}
-        {% block stylesheets %}
-            {#{{ encore_entry_link_tags('app') }}#}
-        {% endblock %}
+	<head>
+		<meta charset="UTF-8">
 
-        {% block javascripts %}
-            {#{{ encore_entry_script_tags('app') }}#}
-        {% endblock %}
-    </head>
-    <body>
-        {% block body %}{% endblock %}
-    </body>
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+
+
+		<header class="p-3 bg-dark text-white">
+			<div class="container">
+				<div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+					<a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+						<img class="img-fluid img-thumbnail" width="120" src="https://t3.ftcdn.net/jpg/01/37/37/10/240_F_137371088_fgyexgp5eh97Ds4BVgVxZULaFgbLBIjh.jpg">
+					</a>
+
+					<ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+						<li>
+							<a href="/" class="nav-link px-2 text-white">Accueil</a>
+						</li>
+						<li>
+							<a href="/presentation" class="nav-link px-2 text-white">Qui Sommes Nous ?</a>
+						</li>
+						<li>
+							<a href="/prestation" class="nav-link px-2 text-white">Nos Prestations</a>
+						</li>
+						<li>
+							<a href="#" class="nav-link px-2 text-white">Avis</a>
+						</li>
+						<li>
+							<a href="#" class="nav-link px-2 text-white">Contact</a>
+						</li>
+					</ul>
+					<div class="text-end">
+					{% if is_granted('IS_AUTHENTICATED_FULLY') %}
+    					<a href="/logout" type="button" class="btn btn-outline-danger">Se déconnecter</a>
+					{% else %}
+						<a href="/login" type="button" class="btn btn-outline-light me-2">Se Connecter</a>
+						<a href="/register" type="button" class="btn btn-outline-warning">Créer un compte</a>
+					{% endif %}
+					</div>
+				</div>
+			</div>
+		</header>
+
+
+		{# Run `composer require symfony/webpack-encore-bundle`
+						           and uncomment the following Encore helpers to start using Symfony UX #}
+		{% block stylesheets %}
+			{#{{ encore_entry_link_tags('app') }}#}
+		{% endblock %}
+
+		{% block javascripts %}
+			{#{{ encore_entry_script_tags('app') }}#}
+		{% endblock %}
+	</head>
+	<body>
+		{% block body %}{% endblock %}
+	</body>
+
+
+	<div class="container">
+		<footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+			<p class="col-md-3 mb-0 text-muted">© 2021 Company, Inc</p>
+
+			<img class="img-fluid img-thumbnail" width="120" src="https://t3.ftcdn.net/jpg/01/37/37/10/240_F_137371088_fgyexgp5eh97Ds4BVgVxZULaFgbLBIjh.jpg">
+
+			<ul class="nav col-md-5 justify-content-end">
+				<li class="nav-item">
+					<a href="/" class="nav-link px-2 text-muted">Accueil</a>
+				</li>
+				<li class="nav-item">
+					<a href="/presentation" class="nav-link px-2 text-muted">Qui Sommes Nous ?</a>
+				</li>
+				<li class="nav-item">
+					<a href="/prestation" class="nav-link px-2 text-muted">Nos Prestations</a>
+				</li>
+				<li class="nav-item">
+					<a href="#" class="nav-link px-2 text-muted">Avis</a>
+				</li>
+				<li class="nav-item">
+					<a href="#" class="nav-link px-2 text-muted">Contact</a>
+				</li>
+			</ul>
+		</footer>
+	</div>
 </html>
