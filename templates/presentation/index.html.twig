@@ -4,41 +4,68 @@
 
 	<div class="container p-xl">
 		{% if is_granted('IS_AUTHENTICATED_FULLY') %}
+			<div class="container text-center my-4">
 			<a href="/presentation/new" class="btn mt-4 px-4 btn-outline-primary">Ajouter une Presentation</a>
+			</div>
 		{% endif %}
-        {% set nb = 1 %}
+		{% set nb = 1 %}
 		{% for presentation in presentations %}
-            {% if nb % 2 == 0 %}
 
-
-			<h1 class="card-title my-4 text-center">{{ presentation.title }}</h1>
-			<div class="card mb-3 border-light">
-				<div class="row g-0">
-					<div class="col-md-6">
-						<img src="{{ presentation.imageLien }}" class="img-fluid rounded-start" alt="...">
-					</div>
-					<div class="col-md-6">
-						<div class="card-body">
-							<p class="card-text lead">{{ presentation.content | raw }}</p>
-							<div class="text-center">
-								<div class="date">Ecrit le
-									{{ presentation.createAt | date('d/m/Y') }}
-									à
-									{{ presentation.createAt | date('H:i') }}</div>
-								{% if is_granted('IS_AUTHENTICATED_FULLY') %}
-								</br>
-								<a href="/presentation/{{ presentation.id }}/edit" class="btn btn-outline-primary">Modifier</a>
-								<a href="/presentation/{{ presentation.id }}/delete" onclick="return confirm('Voulez vous vraiment supprimer la presentation ?')" class="btn btn-outline-danger">Supprimer</a>
-							{% endif %}
+			{% if nb % 2 == 0 %}
+				<h1 class="card-title my-4 text-center">{{ presentation.title }}</h1>
+				<div class="card mb-3 border-light">
+					<div class="row g-0">
+						<div class="col-md-6">
+							<img src="{{ presentation.imageLien }}" class="img-fluid rounded-start" alt="...">
+						</div>
+						<div class="col-md-6">
+							<div class="card-body">
+								<p class="card-text lead">{{ presentation.content | raw }}</p>
+								<div class="text-center">
+									<div class="date">Ecrit le
+										{{ presentation.createAt | date('d/m/Y') }}
+										à
+										{{ presentation.createAt | date('H:i') }}</div>
+									{% if is_granted('IS_AUTHENTICATED_FULLY') %}
+									</br>
+									<a href="/presentation/{{ presentation.id }}/edit" class="btn btn-outline-primary">Modifier</a>
+									<a href="/presentation/{{ presentation.id }}/delete" onclick="return confirm('Voulez vous vraiment supprimer la presentation ?')" class="btn btn-outline-danger">Supprimer</a>
+								{% endif %}
+							</div>
 						</div>
 					</div>
 				</div>
-			</div>
-            {% else %}
-           //Mette la page en inversée
-            {% endif %}
-            {% set nb = nb + 1 %}
-	    {% endfor %}
-    </div>
+
+			{% else %}
+
+				<h1 class="card-title my-4 text-center">{{ presentation.title }}</h1>
+				<div class="card mb-3 border-light">
+					<div class="row g-0">
+						<div class="col-md-6">
+							<div class="card-body">
+								<p class="card-text lead">{{ presentation.content | raw }}</p>
+								<div class="text-center">
+									<div class="date">Ecrit le
+										{{ presentation.createAt | date('d/m/Y') }}
+										à
+										{{ presentation.createAt | date('H:i') }}</div>
+									{% if is_granted('IS_AUTHENTICATED_FULLY') %}
+									</br>
+									<a href="/presentation/{{ presentation.id }}/edit" class="btn btn-outline-primary">Modifier</a>
+									<a href="/presentation/{{ presentation.id }}/delete" onclick="return confirm('Voulez vous vraiment supprimer la presentation ?')" class="btn btn-outline-danger">Supprimer</a>
+								{% endif %}
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<img src="{{ presentation.imageLien }}" class="img-fluid rounded-start" alt="...">
+						</div>
+					</div>
+				</div>
+
+			{% endif %}
+			{% set nb = nb + 1 %}
+		{% endfor %}
+	</div>
 
 {% endblock %}

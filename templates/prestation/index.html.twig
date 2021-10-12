@@ -17,7 +17,7 @@
 							<div>
 								<div class="card-body">
 									<h5 class="card-title">{{ prestation.titre }}</h5>
-									<p class="card-text">{{ prestation.description }}</p>
+									<p class="card-text">{{ prestation.description | raw }}</p>
 									<p class="card-text">a partir de
 										<strong>{{ prestation.prix }}€</strong>
 									</p>

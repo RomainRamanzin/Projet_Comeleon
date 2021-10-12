@@ -1,0 +1,29 @@
+{% extends 'base.html.twig' %}
+
+{% form_theme formcontact 'bootstrap_4_layout.html.twig' %}
+
+{% block body %}
+<div class="container">
+    <center><h1>Contactez-nous !</h1></center>
+
+    {{ form_start(formcontact)}}
+
+    <div class="form-group">
+        {{ form_row(formcontact.nom, { 'attr' : { placeholder : "Votre nom" }}) }}
+    </div>
+    <div class="form-group">
+        {{ form_row(formcontact.prenom, { 'attr' : { placeholder : "Votre prénom" }}) }}
+    </div>
+    <div class="form-group">
+        {{ form_row(formcontact.mail, { 'attr' : { placeholder : "Votre mail" }}) }}
+    </div>
+    <div class="form-group">
+        {{ form_row(formcontact.telephone, { 'attr' : { placeholder : "Votre téléphone" }}) }}
+    </div>
+    <div class="form-group">
+        {{ form_row(formcontact.description, { 'attr' : { placeholder : "Votre message" }}) }}
+    </div>
+    <button type="submit" class="btn btn-success">Envoyer</button>
+   </div> 
+    {{ form_end(formcontact)}}
+{% endblock %}

@@ -1,0 +1,45 @@
+{% extends 'base.html.twig' %}
+
+
+{% block body %}
+ 
+	
+
+	<center><h1>Avis du site</h1></center>
+    <center><a href="{{ path('avis_nouveau')}}" class="btn btn-primary" style="background-color:#2A2A2A;">Ajouter</a></center>
+    </br>
+		{% for avi in avis %}
+		<div class="container">
+            <div class="card card-color-men">
+  <div class="card-header" style="background-color: #2A2A2A; color:white;">
+    
+    <h3 class="person-name">{{ avi.auteur }}</h3>
+    <p class="comment-date">Ecrit le
+					{{ avi.createdAt | date('d/m/y') }}
+					à
+					{{ avi.createdAt | date('H:i') }}</p>
+                    <a href="{{ path('avis_show', {'id' : avi.id}) }}" ><button style=" background-color:#393939; color:white;">Lire l'avis</button></a>
+  </div>
+  <div class="card-body">
+    <p class="comment-text">{{ avi.content | raw}}</p>
+  </div>
+</div>
+</div>
+</br>
+
+		{% endfor %}
+	
+
+
+	
+		</div>
+
+		
+	
+
+
+
+
+
+
+{% endblock %}
