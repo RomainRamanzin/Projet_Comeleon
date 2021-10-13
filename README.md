@@ -1,13 +1,5 @@
 <div id="top"></div>
 
-<!-- PROJECT SHIELDS -->
-[![Contributors][contributors-shield]][contributors-url]
-[![Forks][forks-shield]][forks-url]
-[![Stargazers][stars-shield]][stars-url]
-[![Issues][issues-shield]][issues-url]
-[![MIT License][license-shield]][license-url]
-
-
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
@@ -95,16 +87,16 @@ L'ors de la réalisation de ce projet, nous avons utilisées différentes techno
 
 Afin de pouvoir visualiser et utiliser notre projet, il est neccessaire de proceder à quelques actions :
 
-### Prérequis
+### Les Prérequis
 
 Dans un premier temps, nous aurons besoin de Symfony 5 
 
-* Téclécharger Symfony sur [symfony.com](https://symfony.com/download)
+* Télécharger Symfony sur [symfony.com](https://symfony.com/download)
 
 Ensuite, nous aurons besoin d'une version de PHP 7 au minimum
 
-* Téclécharger PHP 7 sur [php.net](https://www.php.net/downloads)
-*Vous pouvez verifier l'instalation en entrant la commande 
+* Télécharger PHP 7 sur [php.net](https://www.php.net/downloads)
+* Vous pouvez verifier l'instalation en entrant la commande 
 ```sh
   php -v 
   ```
@@ -112,13 +104,13 @@ Ensuite, nous aurons besoin d'une version de PHP 7 au minimum
 
 Nous auron besoin du manager de dépendance Composer
 
-* Téclécharger composer sur [getcomposer.org](https://getcomposer.org/download/)
+* Télécharger composer sur [getcomposer.org](https://getcomposer.org/download/)
 
 Pour finir, nous aurons besoin d'un serveur de base de données (ici wampserver)
-* Téclécharger WampServer sur [wampserver.com](https://www.wampserver.com/)
+* Télécharger WampServer sur [wampserver.com](https://www.wampserver.com/)
 
 
-### Importation du projet
+### Importation
 
 1. Cloner le repository
    ```sh
@@ -136,7 +128,7 @@ Modifiez les informations de connexion à la base de données dans '.env'
 
 ![Fichier de config](Images/config_bdd.png)
 
-### Importer la base de données
+### Importation
 
 Pour creer la base de données veillez entrer :
 
@@ -185,4 +177,4 @@ Lien du projet : [https://github.com/RomainRamanzin/Projet_Comeleon](https://git
 
 <p align="right">(<a href="#top">Retour en haut</a>)</p>
 
-
+## Images
