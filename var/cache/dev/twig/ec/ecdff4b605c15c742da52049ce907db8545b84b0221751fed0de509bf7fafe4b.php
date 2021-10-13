@@ -135,11 +135,11 @@ class __TwigTemplate_3694748488d7afef42669ffe913dadc4240bbd3a7e0e62476eed69cc0cc
 \t\t\t\t\t\t\t<hr class=\"my-4\">
 \t\t\t\t\t\t\t<div class=\"d-grid mb-2\">
 \t\t\t\t\t\t\t\t<button class=\"btn btn-google btn-login text-uppercase fw-bold\" type=\"submit\">
-\t\t\t\t\t\t\t\t\t<i class=\"fab fa-google me-2\"></i>S'enregistrer avec google</button>
+\t\t\t\t\t\t\t\t\t<i class=\"fab fa-google me-2\"></i>Se connecter avec google</button>
 \t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t<div class=\"d-grid\">
 \t\t\t\t\t\t\t\t<button class=\"btn btn-facebook btn-login text-uppercase fw-bold\" type=\"submit\">
-\t\t\t\t\t\t\t\t\t<i class=\"fab fa-facebook-f me-2\"></i>S'enregistrer avec Facebook</button>
+\t\t\t\t\t\t\t\t\t<i class=\"fab fa-facebook-f me-2\"></i>Se connecter avec Facebook</button>
 \t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t</form>
 \t\t\t\t\t</div>
@@ -232,11 +232,11 @@ class __TwigTemplate_3694748488d7afef42669ffe913dadc4240bbd3a7e0e62476eed69cc0cc
 \t\t\t\t\t\t\t<hr class=\"my-4\">
 \t\t\t\t\t\t\t<div class=\"d-grid mb-2\">
 \t\t\t\t\t\t\t\t<button class=\"btn btn-google btn-login text-uppercase fw-bold\" type=\"submit\">
-\t\t\t\t\t\t\t\t\t<i class=\"fab fa-google me-2\"></i>S'enregistrer avec google</button>
+\t\t\t\t\t\t\t\t\t<i class=\"fab fa-google me-2\"></i>Se connecter avec google</button>
 \t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t<div class=\"d-grid\">
 \t\t\t\t\t\t\t\t<button class=\"btn btn-facebook btn-login text-uppercase fw-bold\" type=\"submit\">
-\t\t\t\t\t\t\t\t\t<i class=\"fab fa-facebook-f me-2\"></i>S'enregistrer avec Facebook</button>
+\t\t\t\t\t\t\t\t\t<i class=\"fab fa-facebook-f me-2\"></i>Se connecter avec Facebook</button>
 \t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t</form>
 \t\t\t\t\t</div>

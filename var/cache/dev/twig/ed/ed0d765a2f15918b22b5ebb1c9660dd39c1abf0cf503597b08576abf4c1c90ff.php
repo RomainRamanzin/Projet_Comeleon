@@ -96,7 +96,7 @@ class __TwigTemplate_559fbc03afc79299eae7b62530eaf7cbefede091d434c857868c00ef3ba
         echo "
         </div>
 
-\t\t\t<button type=\"submit\" class=\"btn btn-primary mt-4\">Register</button>
+\t\t\t<button type=\"submit\" class=\"btn btn-primary mt-4\">Creer mon compte</button>
 \t\t\t";
         // line 23
         echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["registrationForm"]) || array_key_exists("registrationForm", $context) ? $context["registrationForm"] : (function () { throw new RuntimeError('Variable "registrationForm" does not exist.', 23, $this->source); })()), 'form_end');
@@ -147,7 +147,7 @@ class __TwigTemplate_559fbc03afc79299eae7b62530eaf7cbefede091d434c857868c00ef3ba
             }) }}
         </div>
 
-\t\t\t<button type=\"submit\" class=\"btn btn-primary mt-4\">Register</button>
+\t\t\t<button type=\"submit\" class=\"btn btn-primary mt-4\">Creer mon compte</button>
 \t\t\t{{ form_end(registrationForm) }}
 \t\t</div>
 \t</div>
