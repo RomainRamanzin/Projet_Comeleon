@@ -3,7 +3,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-    <img src="Images/Logo.png" alt="Logo" width="80" height="80">
+    <img src="https://t3.ftcdn.net/jpg/01/37/37/10/240_F_137371088_fgyexgp5eh97Ds4BVgVxZULaFgbLBIjh.jpg" alt="Logo" width="120">
 
   <h3 align="center">Projet Comeleon</h3>
 
@@ -48,7 +48,7 @@
 <!-- Contexte -->
 ## Contexte
 
-[![Product Name Screen Shot][product-screenshot]](Images/accueil.png)
+![Fichier de config](Images/accueil.png)
 
 L’agence Comeleon propose ces services dans la création de site, application, à l’acquisition de nouveaux clients via les moteurs de recherche et les réseaux sociaux, elle accélère le business sur internet.
 
@@ -178,3 +178,21 @@ Lien du projet : [https://github.com/RomainRamanzin/Projet_Comeleon](https://git
 <p align="right">(<a href="#top">Retour en haut</a>)</p>
 
 ## Images
+
+Voici la liste des différentes images utilisées sur notre site :
+
+* [Logo du site](https://t3.ftcdn.net/jpg/01/37/37/10/240_F_137371088_fgyexgp5eh97Ds4BVgVxZULaFgbLBIjh.jpg)
+* [image d'accueil](https://image.freepik.com/vecteurs-libre/composition-isometrique-pour-fixation-fuites-chaudiere_1284-17770.jpg)
+* [accueil](https://www.raquin-duchon.com/wp-content/uploads/photo-plombier.jpg)
+* [accueil_2](https://storage.googleapis.com/assets-monsite-medias/monsitemoncommerce.com-la-plomberie-longonienne/2020/11/3a47bf1a-istock-5170613592.jpg)
+* [presentation](https://www.schneider-cie.fr/wp-content/uploads/2021/06/plombier-chauffagiste-schneider-et-cie-1024x576.jpg)
+* [presentation_2](https://media.istockphoto.com/vectors/-vector-id1227491350?k=20&m=1227491350&s=612x612&w=0&h=KGs6RK_ElbXLAkILhh_tOzoVK45U5Lem2LYgUo9uUz8=)
+* [prestation](https://www.a2depannages.fr/docs/chauffage/chauffagiste-taverny-95-val-d-oise.jpg)
+* [prestation_2](https://www.yesss-fr.com/assets/pics/produits/Plomberie.jpg)
+* [prestation_3](https://www.resoconfort.fr/content/uploads/sites/7/2019/06/shutterstock_655155613-e1560518056689-1024x519.jpg)
+* [prestation_4](https://static.vecteezy.com/ti/vecteur-libre/p1/2163534-pollution-de-la-riviere-avec-les-eaux-usees-de-l-usine-jeter-les-dechets-dans-l-eau-contamination-de-l-eau-potable-vectoriel.jpg)
+* [prestation_5](https://thermozassainissement.fr/wp-content/uploads/2021/03/Thermoz-assainissement-inspection-camera-canalisation.jpg)
+* [prestation_6](https://static.vecteezy.com/ti/vecteur-libre/p1/3146817-le-inondation-a-inonde-la-ville-gratuit-vectoriel.jpg)
+
+
+
