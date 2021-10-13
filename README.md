@@ -10,7 +10,7 @@
   <p align="center">
     <a href="https://github.com/RomainRamanzin/Projet_Comeleon/issues">Signaler un Bug</a>
     ·
-    <a href="https://github.com/RomainRamanzin/Projet_Comeleon/issues">Demander une nouvelle fonctionnalité</a>
+    <a href="https://github.com/RomainRamanzin/Projet_Comeleon/issues">Demander une nouvelle fonctionnalitée</a>
   </p>
 </div>
 
@@ -50,7 +50,7 @@
 
 ![Fichier de config](Images/accueil.png)
 
-L’agence Comeleon propose ces services dans la création de site, application, à l’acquisition de nouveaux clients via les moteurs de recherche et les réseaux sociaux, elle accélère le business sur internet.
+L’agence Comeleon propose ses services dans la création de site, application, à l’acquisition de nouveaux clients via les moteurs de recherche et les réseaux sociaux, elle accélère le business sur internet.
 
 Dans ce projet, nous travaillons dans cette société dans le service ‘création de site’, notre équipe est constitué de 3 membres.
 
@@ -72,7 +72,7 @@ Notre équipe a été chargée de réaliser ce projet pour un Blombier Chauffagi
 
 ### Technologie
 
-L'ors de la réalisation de ce projet, nous avons utilisées différentes technologies :
+Lors de la réalisation de ce projet, nous avons utilisés différentes technologies :
 
 * [Symfony 5](https://symfony.com/)
 * [BootStrap 5](https://getbootstrap.com/)
@@ -85,7 +85,7 @@ L'ors de la réalisation de ce projet, nous avons utilisées différentes techno
 <!-- Installation -->
 ## Installation
 
-Afin de pouvoir visualiser et utiliser notre projet, il est neccessaire de proceder à quelques actions :
+Afin de pouvoir visualiser et utiliser notre projet, il est néccessaire de procéder à quelques actions :
 
 ### Les Prérequis
 
@@ -93,16 +93,17 @@ Dans un premier temps, nous aurons besoin de Symfony 5
 
 * Télécharger Symfony sur [symfony.com](https://symfony.com/download)
 
+
 Ensuite, nous aurons besoin d'une version de PHP 7 au minimum
 
 * Télécharger PHP 7 sur [php.net](https://www.php.net/downloads)
-* Vous pouvez verifier l'instalation en entrant la commande 
+* Vous pouvez verifier l'installation en entrant la commande 
 ```sh
   php -v 
   ```
 
 
-Nous auron besoin du manager de dépendance Composer
+Nous aurons besoin du manager de dépendance Composer
 
 * Télécharger composer sur [getcomposer.org](https://getcomposer.org/download/)
 
@@ -130,7 +131,7 @@ Modifiez les informations de connexion à la base de données dans '.env'
 
 ### Importation
 
-Pour creer la base de données veillez entrer :
+Pour créer la base de données veillez entrer :
 
 ```sh
    symfony console doctrine:database:create
@@ -142,7 +143,7 @@ Une fois la base créée, nous allons importer les tables
    symfony console doctrine:migrations:migrate
 ```
 
-Pour en finir avec la base de données, nous allons impoerter les jeux d'essais réalisés
+Pour en finir avec la base de données, nous allons importer les jeux d'essais réalisés
 
 ```sh
    symfony console doctrinefixture:load
